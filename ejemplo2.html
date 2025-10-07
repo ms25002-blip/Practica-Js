@@ -21,6 +21,13 @@
         function calcular(){
             var edad = getValue("txtEdad")
             var salida = "Edad: " + edad;
+
+            if(edad >=18){
+                salida += ", eres mayor de edad. ";
+            } else{
+                salida += ", eres menor de edad. ";
+            }
+
             alert(salida);
         }
 

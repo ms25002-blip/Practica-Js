@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <ul id="lista"></ul>
+
+    <script>
+        var obj = { id:1, nombre:`Cocacola`, precio:1.25, imagenUrl: "https://thumbs.dreamstime.com/b/logotipo-de-coca-cola-en-la-pantalla-de-ordenador-80980608.jpg" };
+        var productos = [
+            { id:2, nombre:"margarina orisol", precio:1.75, imagenUrl: "https://walmartsv.vtexassets.com/arquivos/ids/424815-800-450?v=638457358304370000&width=800&height=450&aspect=true" },
+            { id:3, nombre:"Pepsi", precio:1.15, imagenUrl: "https://walmartsv.vtexassets.com/arquivos/ids/452533/Refresco-Gaseosa-Pepsi-Reg-Lata-335-Ml-2-5741.jpg?v=638518377718130000" },
+            { id:4, nombre:"Quesillo", precio:1.75, imagenUrl: "https://oaxaca.quadratin.com.mx/www/wp-content/uploads/2021/04/quesillofok-1160x700.jpg" },
+        ];
+
+        productos.push(obj);
+        productos.forEach( x => {
+            var salida = `<li>
+                          <b>id:</b> ${x.id} {<br>
+                          <b>nombre:</b> ${x.nombre},<br>
+                          <b>precio:</b> ${x.precio},<br>
+                          <img src="${x.imagenUrl}" height="150" />
+                          </li>`;
+                          
+            document.getElementById(`lista`).innerHTML += salida;
+        } );
+    </script>
+</body>
+</html>
